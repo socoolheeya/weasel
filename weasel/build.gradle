@@ -51,9 +51,11 @@ dependencies {
 			"org.springframework.boot:spring-boot-starter-aop:${springVersion}",
 			"org.springframework.boot:spring-boot-starter-log4j2:${springVersion}",
 			"org.springframework.boot:spring-boot-starter-freemarker:${springVersion}",
-			"org.springframework.boot:spring-boot-starter-security:${springVersion}"
-			"org.springframework.boot:spring-boot-starter-jersey:${springVersion}"
-			"org.springframework.boot:spring-boot-starter-thymeleaf:${springVersion}"
+			"org.springframework.boot:spring-boot-starter-security:${springVersion}",
+			"org.springframework.boot:spring-boot-starter-jersey:${springVersion}",
+			"org.springframework.boot:spring-boot-starter-thymeleaf:${springVersion}",
+			"org.springframework.boot:spring-boot-devtools:${springVersion}"
+			
 			
 	
 	compile "org.springframework.boot:spring-boot-autoconfigure:${springVersion}",

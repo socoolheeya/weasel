@@ -22,6 +22,10 @@ public class UserDao {
 		return dao.selectOne("user.view", paramMap);
 	}
 	
+	public UMap viewByUserName(String username) throws Exception {
+		return dao.selectOne("user.viewByUserName", username);
+	}
+	
 	public int insert(UMap paramMap) throws Exception {
 		return dao.insert("user.insert", paramMap);
 	}

@@ -8,7 +8,7 @@
 
 	<logger name="root" level="DEBUG" />
 	<logger name="com.weasel" level="DEBUG" />
-	<logger name="org.springframework" level="DEBUG" />
+	<logger name="org.springframework" level="info" />
 	<logger name="java.sql" level="INFO" additivity="false">
 		<appender-ref ref="STDOUT" />
 	</logger>
@@ -20,7 +20,7 @@
 	<logger name="jdbc.resultsettable" level="DEBUG" />
 	<logger name="jdbc.connection" level="OFF" />
 
-	<root level="DEBUG">
+	<root level="info">
 		<appender-ref ref="STDOUT" />
 	</root>
 </configuration>

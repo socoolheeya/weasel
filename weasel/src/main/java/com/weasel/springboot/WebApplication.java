@@ -13,13 +13,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.filter.CharacterEncodingFilter;
 
 @SpringBootApplication
 @ComponentScan(basePackages="com.weasel")
 public class WebApplication extends SpringBootServletInitializer {
 
-	/*@Bean
+	@Bean
     public HttpMessageConverter<String> responseBodyConverter() {
         return new StringHttpMessageConverter(Charset.forName("UTF-8"));
     }
@@ -30,7 +32,12 @@ public class WebApplication extends SpringBootServletInitializer {
         characterEncodingFilter.setEncoding("UTF-8");
         characterEncodingFilter.setForceEncoding(true);
         return characterEncodingFilter;
-    }*/
+    }
+    
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+    	return new BCryptPasswordEncoder();
+    }
 	
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {

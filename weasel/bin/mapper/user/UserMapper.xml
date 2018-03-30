@@ -43,6 +43,19 @@
 		WHERE EMAIL = #{email}
 	</select>
 	
+	<select id="viewByUserName" parameterType="map" resultType="String">
+		/* user.viewByUserName */
+		SELECT
+			  EMAIL
+			, PASSWORD
+			, NAME
+			, PHONE
+			, ADDRESS
+			, BIRTHDAY
+		FROM T_USER
+		WHERE EMAIL = #{email}
+	</select>
+	
 	<insert id="insertUser" parameterType="map">
 		INSERT INTO /* user.insertUser */
 			TBLUSER
